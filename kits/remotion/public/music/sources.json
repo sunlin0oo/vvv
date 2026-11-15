@@ -23,7 +23,10 @@
       "distribution": "download",
       "bytes": 6589843,
       "sha256": "2fcb36e7e58c4b6bc1505b7980237fdad86696589572a958bb6ee2084c592cc5",
-      "bpm": 84
+      "bpm": 84,
+      "templates": [
+        "bloom"
+      ]
     },
     {
       "file": "mixkit-first-kiss.mp3",

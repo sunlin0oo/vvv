@@ -106,7 +106,7 @@ test('every catalog file has a registered template with the same composition ID,
   const { TEMPLATES, frameFor } = require('../templates/index.ts');
   const dir = path.join(__dirname, '..', '..', 'catalog');
   const ids = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)).sort();
-  assert.deepEqual(ids, ['album', 'cinema', 'comedy', 'doodle', 'dv-story', 'editorial', 'memoir', 'papercut-frame', 'starter']);
+  assert.deepEqual(ids, ['album', 'bloom', 'cinema', 'comedy', 'doodle', 'dv-story', 'editorial', 'memoir', 'papercut-frame', 'starter']);
   assert.deepEqual(Object.keys(TEMPLATES).sort(), ids);
   for (const id of ids) {
     const catalog = JSON.parse(fs.readFileSync(path.join(dir, `${id}.json`), 'utf8'));

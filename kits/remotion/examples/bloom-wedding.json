@@ -1,0 +1,147 @@
+{
+  "template": "bloom",
+  "props": {
+    "couple": {
+      "groom": "陆知行",
+      "bride": "苏念",
+      "groomEn": "LU ZHIXING",
+      "brideEn": "SU NIAN",
+      "date": "2026-09-19",
+      "tagline": "我们结婚啦"
+    },
+    "photos": {
+      "homeGroom": "bloom-demo-landmark-jinan",
+      "homeBride": "bloom-demo-landmark-qingdao",
+      "kidGroom": "memoir-demo-kid-groom",
+      "kidBride": "memoir-demo-kid-bride",
+      "parents": [
+        "dvdemo-b-baby",
+        "bride-01-childhood-02",
+        "dvdemo-eng-b",
+        "dvdemo-xmas"
+      ],
+      "wing": [
+        "bloom-demo-wing-1",
+        "bloom-demo-wing-2",
+        "bloom-demo-wing-3",
+        "bloom-demo-wing-4"
+      ],
+      "growing": [
+        "groom-02-school-01",
+        "groom-02-school-02",
+        "bride-02-school-01",
+        "bride-02-school-02"
+      ],
+      "parentsThanks": [
+        "dvdemo-eng-family",
+        "dvdemo-newyear"
+      ],
+      "firstMeet": "bloom-demo-capsule-qingdao",
+      "meetGroom": "bloom-demo-meet-groom",
+      "meetBride": "bloom-demo-meet-bride",
+      "dating": [
+        "bloom-demo-dating-1",
+        "bloom-demo-dating-2",
+        "bloom-demo-dating-3"
+      ],
+      "pets": "bloom-demo-pets",
+      "memories": [
+        "dvdemo-bday",
+        "dvdemo-concert",
+        "couple-03-dating-03",
+        "couple-08-wedding-s2-seaside-02"
+      ],
+      "travel": [
+        "couple-06-travel-01",
+        "couple-08-wedding-s7-highland-01",
+        "couple-08-wedding-s7-highland-02",
+        "couple-08-wedding-s7-highland-03",
+        "couple-08-wedding-s2-seaside-02",
+        "couple-08-wedding-s2-seaside-04",
+        "couple-08-wedding-s4-garden-04",
+        "couple-04-daily-01",
+        "dvdemo-ski",
+        "dvdemo-travel",
+        "couple-08-wedding-s8-night-01"
+      ],
+      "ritual": [
+        "dvdemo-flower-a",
+        "dvdemo-flower-b",
+        "dvdemo-xmas"
+      ],
+      "proposal": [
+        "couple-07-proposal-02",
+        "couple-07-proposal-01"
+      ],
+      "engagement": [
+        "couple-09-chinese-c1-courtyard-01",
+        "couple-09-chinese-c2-redwall-01",
+        "couple-09-chinese-c3-chamber-01"
+      ],
+      "license": [
+        "couple-08-wedding-s1-studio-01",
+        "couple-08-wedding-s1-studio-02",
+        "couple-08-wedding-s1-studio-03"
+      ],
+      "wedding": [
+        "couple-08-wedding-s5-chapel-01",
+        "couple-08-wedding-s6-street-01",
+        "couple-08-wedding-s3-interior-01",
+        "couple-08-wedding-s8-night-02"
+      ]
+    },
+    "copy": {
+      "prologueSuffix": "的故事即将开始...",
+      "bornTitle": "我们出生啦！！",
+      "cityGroom": "济南",
+      "cityBride": "青岛",
+      "yearGroom": "2000",
+      "yearBride": "2001",
+      "parentsTitle1": "爱人如养花",
+      "parentsTitle2": "爸爸妈妈",
+      "wingTitle": "在父母的呵护下...",
+      "growingTitle1": "我们幸福地",
+      "growingTitle2": "茁壮成长",
+      "thanksP1": "一路上感谢父母的照顾",
+      "thanksP2": "谢谢你们赐予我们生命 辛苦把我们养育长大",
+      "meetYear": "时间来到 2021年...",
+      "meetTitle": "我们相识于青岛",
+      "datingDate": "2023 11 20",
+      "datingDays": "1569",
+      "memoriesPrefix": "在这些日子里 我们一起",
+      "memoryTag1": "「 庆祝生日 」",
+      "memoryTag2": "「 看演唱会 」",
+      "memoryTag3": "「 我们的第一套写真 」",
+      "travelLeft": "一起去",
+      "travelRight": "旅行",
+      "travel1": "「 打卡云南 」",
+      "travel2": "「 在新疆 」",
+      "travel3": "「 去青岛 」",
+      "travel4": "「 去杭州 」",
+      "travel5": "「 去长白山 」",
+      "travel6": "「 去大西北 」",
+      "ritualL1": "谢谢你从开始到现在",
+      "ritualL3": "哪怕不是节日也有惊喜",
+      "poem1": "我们一起度过了许多个春夏秋冬",
+      "poem2": "我们一起成长 一起努力",
+      "poem3": "生活被这一个个瞬间点亮",
+      "poem4": "不知不觉我们早已是家人般的存在",
+      "proposalTag": "「 求婚啦 」",
+      "engagementTag": "「 我们订婚啦 」",
+      "licenseDate": "2026年05月20日",
+      "licenseTitle": "我们领证啦",
+      "thanksGuests": "非常感谢各位来宾 在百忙之中前来参加我们的婚礼",
+      "finaleL1": "见证我们",
+      "finaleL2": "人生重要的时刻"
+    },
+    "pace": 1,
+    "fps": 30,
+    "music": {
+      "src": "music/mixkit-skyline.mp3",
+      "volume": 0.9,
+      "trimBeforeSec": 0,
+      "fadeInSec": 0.3,
+      "fadeOutSec": 3
+    }
+  }
+}

@@ -4195,6 +4195,214 @@
         "sha256": "08d87c620d68fd93ce86e24bc9168e088f22496485ebe75534b13198381109da",
         "note": "Cut-out of the fictional couple-08-wedding-s1-studio-06, generated on 2026-10-30 with Codex image generation through the c2c route for the Memoir demo; transparent background; not customer media."
       }
+    },
+    {
+      "id": "bloom-demo-capsule-qingdao",
+      "file": "photos/bloom-demo-capsule-qingdao.jpg",
+      "width": 717,
+      "height": 960,
+      "orientation": "portrait",
+      "cutout": false,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "qingdao-may-fourth-dusk",
+        "sha256": "f85e195d97bfb626e8aecab26bb04076e15f594b0ab37a77099714f9314749db",
+        "note": "Generated dusk landmark photo depicting Qingdao May Fourth Square bay for the Bloom template example."
+      },
+      "source": "generated-landmark"
+    },
+    {
+      "id": "bloom-demo-landmark-jinan",
+      "file": "photos/bloom-demo-landmark-jinan.png",
+      "width": 519,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "jinan-redbrick-landmark",
+        "sha256": "93a7afd04d9e58613fdfec1029c65ab0cbe86983371ff30cd8515d596e748472",
+        "note": "Jinan historic red-brick facade landmark cutout generated for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "jinan-redbrick-landmark"
+    },
+    {
+      "id": "bloom-demo-landmark-qingdao",
+      "file": "photos/bloom-demo-landmark-qingdao.png",
+      "width": 490,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "qingdao-mays-wind",
+        "sha256": "512662217f4abc8903384505376e41924e16667c57cecda4184e5984713f9c63",
+        "note": "Qingdao May's Wind crimson spiral landmark cutout generated for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "qingdao-mays-wind"
+    },
+    {
+      "id": "bloom-demo-wing-1",
+      "file": "photos/bloom-demo-wing-1.png",
+      "width": 623,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "groom-01-childhood-02",
+        "sha256": "d1195d2b6c45763ff3245066e65b9c0e56f168ab9a3941d721950b21062cd9e3",
+        "note": "Cut-out matching the fictional groom-01-childhood-02 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "groom-01-childhood-02"
+    },
+    {
+      "id": "bloom-demo-wing-2",
+      "file": "photos/bloom-demo-wing-2.png",
+      "width": 792,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "dvdemo-b-baby",
+        "sha256": "cf2cf26320fb4b43b062b9fb891d963cea4230a156a89d7126e86e12735eacfc",
+        "note": "Cut-out matching the fictional dvdemo-b-baby photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "dvdemo-b-baby"
+    },
+    {
+      "id": "bloom-demo-wing-3",
+      "file": "photos/bloom-demo-wing-3.png",
+      "width": 567,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "bride-01-childhood-01",
+        "sha256": "67c96f30060a1a6c0cd486c4b2ea8b7b2e21c149522af22368ed62d24813cc4c",
+        "note": "Cut-out matching the fictional bride-01-childhood-01 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "bride-01-childhood-01"
+    },
+    {
+      "id": "bloom-demo-wing-4",
+      "file": "photos/bloom-demo-wing-4.png",
+      "width": 607,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "groom-01-childhood-03",
+        "sha256": "04eaf3b20922f18f1f7c16bacee588af9b292a12e733be82bec79e5be3e318ed",
+        "note": "Cut-out matching the fictional groom-01-childhood-03 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "groom-01-childhood-03"
+    },
+    {
+      "id": "bloom-demo-meet-groom",
+      "file": "photos/bloom-demo-meet-groom.png",
+      "width": 617,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "groom-02-school-01",
+        "sha256": "965fe4b44b7426c174431af0825e34b4dce7d6eae8763c3ad4af620852573e7c",
+        "note": "Cut-out matching the fictional groom-02-school-01 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "groom-02-school-01"
+    },
+    {
+      "id": "bloom-demo-meet-bride",
+      "file": "photos/bloom-demo-meet-bride.png",
+      "width": 481,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "bride-02-school-01",
+        "sha256": "2597d70eb7255bc5a23d95e21657b92dbae23aaba0659bad49941b2b8d58149a",
+        "note": "Cut-out matching the fictional bride-02-school-01 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "bride-02-school-01"
+    },
+    {
+      "id": "bloom-demo-dating-1",
+      "file": "photos/bloom-demo-dating-1.png",
+      "width": 778,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "couple-03-dating-01",
+        "sha256": "4ab1adaa825b55c033205b120cbafd776b2467b9e7a5f569dcd4b72c5a56d808",
+        "note": "Cut-out matching the fictional couple-03-dating-01 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "couple-03-dating-01"
+    },
+    {
+      "id": "bloom-demo-dating-2",
+      "file": "photos/bloom-demo-dating-2.png",
+      "width": 738,
+      "height": 860,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "couple-03-dating-03",
+        "sha256": "456b774370ef7f40e8100a0bd6a7c621c275059a1e39e34e110cbb3512e63d88",
+        "note": "Cut-out matching the fictional couple-03-dating-03 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "couple-03-dating-03"
+    },
+    {
+      "id": "bloom-demo-dating-3",
+      "file": "photos/bloom-demo-dating-3.png",
+      "width": 860,
+      "height": 632,
+      "orientation": "landscape",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "couple-03-dating-04",
+        "sha256": "ed91fda04f34dea61d2934ed917bff67d7b204d24be066e2ee9d1232ffb92fa1",
+        "note": "Cut-out matching the fictional couple-03-dating-04 photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "couple-03-dating-04"
+    },
+    {
+      "id": "bloom-demo-pets",
+      "file": "photos/bloom-demo-pets.png",
+      "width": 570,
+      "height": 823,
+      "orientation": "portrait",
+      "cutout": true,
+      "faces": [],
+      "provenance": {
+        "kind": "fictional-demo",
+        "sourceName": "dvdemo-cat",
+        "sha256": "b5245b0699c8d6acf683c93084e623aca74a1c529ce4340c932a10afd185c8ca",
+        "note": "Cut-out matching the fictional dvdemo-cat photo for the Bloom demo; transparent background; not customer media."
+      },
+      "source": "dvdemo-cat"
     }
   ]
 }

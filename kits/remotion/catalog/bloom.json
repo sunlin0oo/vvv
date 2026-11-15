@@ -1,0 +1,314 @@
+{
+  "id": "bloom",
+  "version": "1.0.0",
+  "compositionId": "VVV-Bloom",
+  "title": "Bloom · 爱人如养花 · 婚礼开场",
+  "description": "黑底手绘贴纸风婚礼开场视频（约 2 分 35 秒，全片 214 拍随 Skyline 84 BPM 旋律推进）：片头引子（我们的故事即将开始...）→ 我们出生啦（两翼地标建筑与新郎新娘童年全身立牌）→ 爱人如养花（父母结婚老照片彩框）→ 父母呵护（白边抠图贴纸与 SVG 黑胶唱片）→ 茁壮成长（幸福成长与小太阳）→ 感恩父母（父母横版大合影与感恩诗）→ 相识青岛（打字过渡+地标椭圆框+青年立牌与纸飞机）→ 恋人与宠物（定情贴纸与萌宠立牌）→ 携手同行天数 → 日常记忆打卡（生日、演唱会、第一套写真）→ 一起去旅行（云南、新疆、青岛、杭州、长白山、大西北 11 张影像带）→ 生活仪式感与惊喜礼物 → 四季诗意感悟长句 → 求婚啦 → 中式订婚啦 → 结婚领证三栏 → 新篇章大主婚纱照逐行诗 → 宾客致谢双人照 → 聚光灯尾声。",
+  "formats": {
+    "16:9": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "defaultFormat": "16:9",
+  "package": {
+    "name": "@vvv/bloom",
+    "fixture": "examples/bloom-wedding.json",
+    "authors": ["VVV"],
+    "license": "MIT"
+  },
+  "music": {
+    "required": true,
+    "defaultSrc": "mixkit-skyline.mp3"
+  },
+  "check": {
+    "maxStillSeconds": 15
+  },
+  "defaultProps": {
+    "couple": {
+      "groom": "陆知行",
+      "bride": "苏念",
+      "groomEn": "LU ZHIXING",
+      "brideEn": "SU NIAN",
+      "date": "2026-09-19",
+      "tagline": "我们结婚啦"
+    },
+    "photos": {
+      "homeGroom": "",
+      "homeBride": "",
+      "kidGroom": "",
+      "kidBride": "",
+      "parents": [],
+      "wing": [],
+      "growing": [],
+      "parentsThanks": [],
+      "firstMeet": "",
+      "meetGroom": "",
+      "meetBride": "",
+      "dating": [],
+      "pets": "",
+      "memories": [],
+      "travel": [],
+      "ritual": [],
+      "proposal": [],
+      "engagement": [],
+      "license": [],
+      "wedding": []
+    },
+    "copy": {
+      "prologueSuffix": "的故事即将开始...",
+      "bornTitle": "我们出生啦！！",
+      "cityGroom": "济南",
+      "cityBride": "青岛",
+      "yearGroom": "2000",
+      "yearBride": "2001",
+      "parentsTitle1": "爱人如养花",
+      "parentsTitle2": "爸爸妈妈",
+      "wingTitle": "在父母的呵护下...",
+      "growingTitle1": "我们幸福地",
+      "growingTitle2": "茁壮成长",
+      "thanksP1": "一路上感谢父母的照顾",
+      "thanksP2": "谢谢你们赐予我们生命 辛苦把我们养育长大",
+      "meetYear": "时间来到 2021年...",
+      "meetTitle": "我们相识于青岛",
+      "datingDate": "2023 11 20",
+      "datingDays": "1569",
+      "memoriesPrefix": "在这些日子里 我们一起",
+      "memoryTag1": "「 庆祝生日 」",
+      "memoryTag2": "「 看演唱会 」",
+      "memoryTag3": "「 我们的第一套写真 」",
+      "travelLeft": "一起去",
+      "travelRight": "旅行",
+      "travel1": "「 打卡云南 」",
+      "travel2": "「 在新疆 」",
+      "travel3": "「 去青岛 」",
+      "travel4": "「 去杭州 」",
+      "travel5": "「 去长白山 」",
+      "travel6": "「 去大西北 」",
+      "ritualL1": "谢谢你从开始到现在",
+      "ritualL3": "哪怕不是节日也有惊喜",
+      "poem1": "我们一起度过了许多个春夏秋冬",
+      "poem2": "我们一起成长 一起努力",
+      "poem3": "生活被这一个个瞬间点亮",
+      "poem4": "不知不觉我们早已是家人般的存在",
+      "proposalTag": "「 求婚啦 」",
+      "engagementTag": "「 我们订婚啦 」",
+      "licenseDate": "2026年05月20日",
+      "licenseTitle": "我们领证啦",
+      "thanksGuests": "非常感谢各位来宾 在百忙之中前来参加我们的婚礼",
+      "finaleL1": "见证我们",
+      "finaleL2": "人生重要的时刻"
+    },
+    "pace": 1,
+    "music": {
+      "src": "music/mixkit-skyline.mp3",
+      "volume": 0.9,
+      "trimBeforeSec": 0,
+      "fadeInSec": 0.3,
+      "fadeOutSec": 3
+    }
+  },
+  "slots": {
+    "homeGroom": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "新郎家乡地标楼贴纸"
+    },
+    "homeBride": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "新娘家乡青岛雕塑贴纸"
+    },
+    "kidGroom": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "新郎童年全身立牌抠图"
+    },
+    "kidBride": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "新娘童年全身立牌抠图"
+    },
+    "parents": {
+      "kind": "array",
+      "count": 4,
+      "min": 2,
+      "hint": "4张父母合影与全家福（爱人如养花）"
+    },
+    "wing": {
+      "kind": "array",
+      "count": 4,
+      "min": 2,
+      "hint": "4张童年家庭合影白边贴纸（在父母呵护下）"
+    },
+    "growing": {
+      "kind": "array",
+      "count": 4,
+      "min": 2,
+      "hint": "4张学生时代成长照（茁壮成长）"
+    },
+    "parentsThanks": {
+      "kind": "array",
+      "count": 2,
+      "min": 1,
+      "hint": "2张横版父母全家福大图（感恩父母）"
+    },
+    "firstMeet": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "相识城市地标竖图（粉边椭圆框）"
+    },
+    "meetGroom": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "新郎青年/大学全身立牌抠图"
+    },
+    "meetBride": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "新娘青年/大学全身立牌抠图"
+    },
+    "dating": {
+      "kind": "array",
+      "count": 3,
+      "min": 1,
+      "hint": "3张定情情侣贴纸立牌"
+    },
+    "pets": {
+      "kind": "single",
+      "count": 1,
+      "min": 1,
+      "hint": "可爱宠物猫狗贴纸"
+    },
+    "memories": {
+      "kind": "array",
+      "count": 4,
+      "min": 1,
+      "hint": "4张日常生活记录（生日1横、演唱会1、写真2竖）"
+    },
+    "travel": {
+      "kind": "array",
+      "count": 11,
+      "min": 2,
+      "hint": "11张旅行打卡照片（云南2、新疆2、青岛2、杭州2、长白山1、大西北2）"
+    },
+    "ritual": {
+      "kind": "array",
+      "count": 3,
+      "min": 1,
+      "hint": "3张生活仪式感惊喜礼物竖版照片"
+    },
+    "proposal": {
+      "kind": "array",
+      "count": 2,
+      "min": 1,
+      "hint": "2张浪漫求婚现场照片（首竖次横）"
+    },
+    "engagement": {
+      "kind": "array",
+      "count": 3,
+      "min": 1,
+      "hint": "3张中式订婚喜庆红装照片"
+    },
+    "license": {
+      "kind": "array",
+      "count": 3,
+      "min": 1,
+      "hint": "3张民政局领证竖版合影特写"
+    },
+    "wedding": {
+      "kind": "array",
+      "count": 4,
+      "min": 2,
+      "hint": "4张主婚纱照与致谢、聚光灯竖版合影"
+    }
+  },
+  "arc": [
+    {
+      "id": "childhood",
+      "mood": ["nostalgic", "sweet"],
+      "slots": [
+        "homeGroom",
+        "homeBride",
+        { "slot": "kidGroom", "subject": ["groom"] },
+        { "slot": "kidBride", "subject": ["bride"] },
+        { "slot": "parents", "subject": ["family"] },
+        { "slot": "wing", "subject": ["family"] },
+        "growing",
+        { "slot": "parentsThanks", "subject": ["family"] }
+      ]
+    },
+    {
+      "id": "meeting-dating",
+      "mood": ["sweet", "joyful"],
+      "order": "chronological",
+      "slots": [
+        "firstMeet",
+        { "slot": "meetGroom", "subject": ["groom"] },
+        { "slot": "meetBride", "subject": ["bride"] },
+        { "slot": "dating", "subject": ["couple"] },
+        "pets",
+        { "slot": "memories", "subject": ["couple"] },
+        { "slot": "travel", "subject": ["couple"] },
+        { "slot": "ritual", "subject": ["couple"] }
+      ]
+    },
+    {
+      "id": "vows",
+      "mood": ["romantic", "moving"],
+      "slots": [
+        { "slot": "proposal", "subject": ["couple"] },
+        { "slot": "engagement", "subject": ["couple"] },
+        { "slot": "license", "subject": ["couple"] },
+        { "slot": "wedding", "subject": ["couple"] }
+      ]
+    }
+  ],
+  "shows": {
+    "couple": {
+      "groom": "birth page (beside the hometown landmark and childhood cutout)",
+      "bride": "birth page (beside the hometown landmark and childhood cutout)",
+      "date": "dating counter page and marriage license page"
+    }
+  },
+  "sample": {
+    "from": 0,
+    "to": 15.0
+  },
+  "timeline": {
+    "pages": [
+      { "id": "prologue", "beats": 2 },
+      { "id": "born", "beats": 5 },
+      { "id": "parents", "beats": 6 },
+      { "id": "wing", "beats": 6 },
+      { "id": "growing", "beats": 6 },
+      { "id": "thanksParents", "beats": 9 },
+      { "id": "meet", "beats": 11 },
+      { "id": "dating", "beats": 11 },
+      { "id": "days", "beats": 7 },
+      { "id": "memories", "beats": 27 },
+      { "id": "travel", "beats": 48 },
+      { "id": "ritual", "beats": 9 },
+      { "id": "seasons", "beats": 11 },
+      { "id": "proposal", "beats": 10 },
+      { "id": "engagement", "beats": 15 },
+      { "id": "license", "beats": 6 },
+      { "id": "wedding", "beats": 11 },
+      { "id": "thanksGuests", "beats": 8 },
+      { "id": "finale", "beats": 6 }
+    ],
+    "climax": "wedding",
+    "pace": {
+      "prop": "pace",
+      "min": 0.8,
+      "max": 1.2
+    }
+  }
+}

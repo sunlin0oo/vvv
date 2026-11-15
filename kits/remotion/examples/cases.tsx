@@ -8,6 +8,7 @@ import { starter } from '../src/templates/starter';
 import { editorial } from '../src/templates/editorial';
 import { cinema } from '../src/templates/cinema';
 import { memoir } from '../src/templates/memoir';
+import { bloom } from '../src/templates/bloom';
 import notebook from './doodle-wedding.json';
 import wedding from './album-wedding.json';
 import tape from './dv-our-story.json';
@@ -16,6 +17,7 @@ import reel from './starter-reel.json';
 import magazine from './editorial-wedding.json';
 import screen from './cinema-wedding.json';
 import story from './memoir-wedding.json';
+import bloomCase from './bloom-wedding.json';
 import { papercutFrameDemo } from '../src/effects/papercut-frame/demo';
 import papercut from './effect-papercut-frame.json';
 
@@ -35,6 +37,8 @@ const Cases: React.FC = () => <>
     durationInFrames={Math.ceil(cinema.seconds(screen.props as any) * 30)} calculateMetadata={cinema.calculateMetadata} />
   <Composition id="VVV-Memoir" component={memoir.component} defaultProps={story.props} fps={30} width={1920} height={1080}
     durationInFrames={Math.ceil(memoir.seconds(story.props as any) * 30)} calculateMetadata={memoir.calculateMetadata} />
+  <Composition id="VVV-Bloom" component={bloom.component} defaultProps={{ ...bloom.defaultProps, ...bloomCase.props, fps: 30 } as any} fps={30} width={1920} height={1080}
+    durationInFrames={Math.ceil(bloom.seconds({ ...bloom.defaultProps, ...bloomCase.props, fps: 30 } as any) * 30)} calculateMetadata={bloom.calculateMetadata} />
   <Composition id="VVV-Effect-PapercutFrame" component={papercutFrameDemo.component} defaultProps={papercut.props as any} fps={30} width={1920} height={1080}
     durationInFrames={Math.ceil(papercutFrameDemo.seconds(papercut.props as any) * 30)} />
 </>;

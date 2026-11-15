@@ -299,6 +299,228 @@
       ]
     },
     {
+      "id": "bloom",
+      "kind": "template",
+      "title": "Bloom · 爱人如养花 · 婚礼开场",
+      "description": "黑底手绘贴纸风婚礼开场视频（约 2 分 35 秒，全片 214 拍随 Skyline 84 BPM 旋律推进）：片头引子（我们的故事即将开始...）→ 我们出生啦（两翼地标建筑与新郎新娘童年全身立牌）→ 爱人如养花（父母结婚老照片彩框）→ 父母呵护（白边抠图贴纸与 SVG 黑胶唱片）→ 茁壮成长（幸福成长与小太阳）→ 感恩父母（父母横版大合影与感恩诗）→ 相识青岛（打字过渡+地标椭圆框+青年立牌与纸飞机）→ 恋人与宠物（定情贴纸与萌宠立牌）→ 携手同行天数 → 日常记忆打卡（生日、演唱会、第一套写真）→ 一起去旅行（云南、新疆、青岛、杭州、长白山、大西北 11 张影像带）→ 生活仪式感与惊喜礼物 → 四季诗意感悟长句 → 求婚啦 → 中式订婚啦 → 结婚领证三栏 → 新篇章大主婚纱照逐行诗 → 宾客致谢双人照 → 聚光灯尾声。",
+      "version": "1.0.0",
+      "package": "@vvv/bloom",
+      "defaultFormat": "16:9",
+      "formats": [
+        {
+          "name": "16:9",
+          "width": 1920,
+          "height": 1080,
+          "minPhotos": 25,
+          "targetPhotos": 55,
+          "sample": {
+            "from": 0,
+            "to": 15.0
+          }
+        }
+      ],
+      "slotsByFormat": {
+        "16:9": {
+          "slots": [
+            {
+              "name": "homeGroom",
+              "kind": "single",
+              "hint": "新郎家乡地标楼贴纸"
+            },
+            {
+              "name": "homeBride",
+              "kind": "single",
+              "hint": "新娘家乡青岛雕塑贴纸"
+            },
+            {
+              "name": "kidGroom",
+              "kind": "single",
+              "hint": "新郎童年全身立牌抠图"
+            },
+            {
+              "name": "kidBride",
+              "kind": "single",
+              "hint": "新娘童年全身立牌抠图"
+            },
+            {
+              "name": "parents",
+              "kind": "array",
+              "min": 2,
+              "count": 4,
+              "hint": "4张父母合影与全家福（爱人如养花）"
+            },
+            {
+              "name": "wing",
+              "kind": "array",
+              "min": 2,
+              "count": 4,
+              "hint": "4张童年家庭合影白边贴纸（在父母呵护下）"
+            },
+            {
+              "name": "growing",
+              "kind": "array",
+              "min": 2,
+              "count": 4,
+              "hint": "4张学生时代成长照（茁壮成长）"
+            },
+            {
+              "name": "parentsThanks",
+              "kind": "array",
+              "min": 1,
+              "count": 2,
+              "hint": "2张横版父母全家福大图（感恩父母）"
+            },
+            {
+              "name": "firstMeet",
+              "kind": "single",
+              "hint": "相识城市地标竖图（粉边椭圆框）"
+            },
+            {
+              "name": "meetGroom",
+              "kind": "single",
+              "hint": "新郎青年/大学全身立牌抠图"
+            },
+            {
+              "name": "meetBride",
+              "kind": "single",
+              "hint": "新娘青年/大学全身立牌抠图"
+            },
+            {
+              "name": "dating",
+              "kind": "array",
+              "min": 1,
+              "count": 3,
+              "hint": "3张定情情侣贴纸立牌"
+            },
+            {
+              "name": "pets",
+              "kind": "single",
+              "hint": "可爱宠物猫狗贴纸"
+            },
+            {
+              "name": "memories",
+              "kind": "array",
+              "min": 1,
+              "count": 4,
+              "hint": "4张日常生活记录（生日1横、演唱会1、写真2竖）"
+            },
+            {
+              "name": "travel",
+              "kind": "array",
+              "min": 2,
+              "count": 11,
+              "hint": "11张旅行打卡照片（云南2、新疆2、青岛2、杭州2、长白山1、大西北2）"
+            },
+            {
+              "name": "ritual",
+              "kind": "array",
+              "min": 1,
+              "count": 3,
+              "hint": "3张生活仪式感惊喜礼物竖版照片"
+            },
+            {
+              "name": "proposal",
+              "kind": "array",
+              "min": 1,
+              "count": 2,
+              "hint": "2张浪漫求婚现场照片（首竖次横）"
+            },
+            {
+              "name": "engagement",
+              "kind": "array",
+              "min": 1,
+              "count": 3,
+              "hint": "3张中式订婚喜庆红装照片"
+            },
+            {
+              "name": "license",
+              "kind": "array",
+              "min": 1,
+              "count": 3,
+              "hint": "3张民政局领证竖版合影特写"
+            },
+            {
+              "name": "wedding",
+              "kind": "array",
+              "min": 2,
+              "count": 4,
+              "hint": "4张主婚纱照与致谢、聚光灯竖版合影"
+            }
+          ],
+          "unusedSlots": []
+        }
+      },
+      "copy": {
+        "prologueSuffix": "片头 · 我们的故事即将开始",
+        "bornTitle": "出生页 · 顶部标题",
+        "cityGroom": "新郎家乡城市名",
+        "cityBride": "新娘家乡城市名",
+        "yearGroom": "新郎出生年份",
+        "yearBride": "新娘出生年份",
+        "parentsTitle1": "感恩页 · 第一行粉色大字",
+        "parentsTitle2": "感恩页 · 第二行黄色重点",
+        "wingTitle": "呵护页 · 顶部白色文字",
+        "growingTitle1": "成长页 · 顶部粉色文字",
+        "growingTitle2": "成长页 · 底部黄色文字",
+        "thanksP1": "感谢父母 · 第一行",
+        "thanksP2": "感谢父母 · 第二行",
+        "meetYear": "相识页 · 打字年份",
+        "meetTitle": "相识页 · 主文案",
+        "datingDate": "恋爱定情日",
+        "datingDays": "携手同行天数",
+        "memoriesPrefix": "记忆章节 · 前缀文字",
+        "memoryTag1": "记忆打卡 1",
+        "memoryTag2": "记忆打卡 2",
+        "memoryTag3": "记忆打卡 3",
+        "travelLeft": "旅行章节 · 左侧竖排",
+        "travelRight": "旅行章节 · 右侧竖排",
+        "travel1": "旅行站点 1",
+        "travel2": "旅行站点 2",
+        "travel3": "旅行站点 3",
+        "travel4": "旅行站点 4",
+        "travel5": "旅行站点 5",
+        "travel6": "旅行站点 6",
+        "ritualL1": "仪式感 · 第一行",
+        "ritualL3": "仪式感 · 第三行",
+        "poem1": "四季感悟 · 第一行",
+        "poem2": "四季感悟 · 第二行",
+        "poem3": "四季感悟 · 第三行",
+        "poem4": "四季感悟 · 第四行",
+        "proposalTag": "求婚标签",
+        "engagementTag": "订婚标签",
+        "licenseDate": "领证日期",
+        "licenseTitle": "领证文案",
+        "thanksGuests": "结尾致谢文案",
+        "finaleL1": "尾声聚光灯 · 第一行",
+        "finaleL2": "尾声聚光灯 · 第二行"
+      },
+      "couple": {
+        "groom": "新郎姓名",
+        "bride": "新娘姓名",
+        "groomEn": "新郎英文名或拼音",
+        "brideEn": "新娘英文名或拼音",
+        "date": "婚礼日期",
+        "tagline": "主标题"
+      },
+      "props": {
+        "beatGrid": {
+          "type": "null | object"
+        },
+        "pace": {
+          "type": "number",
+          "description": "节奏：每页时长的倍数。1 为默认；1.2 让每页停留更久，全片随之变长"
+        }
+      },
+      "music": {
+        "required": true,
+        "src": "music/mixkit-skyline.mp3",
+        "downloadOnly": true
+      },
+      "fixture": "examples/bloom-wedding.json",
+      "sourceUrl": "https://github.com/actionow-ai/vvv/tree/main/kits/remotion/src/templates/bloom",
+      "previews": []
+    },
+    {
       "id": "cinema",
       "kind": "template",
       "title": "Cinema · 黑幕影院 · 婚礼开场",
