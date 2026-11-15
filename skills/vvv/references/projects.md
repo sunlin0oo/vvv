@@ -15,9 +15,10 @@ List the kit's templates with `templates`; each `catalog/<id>.json` in the kit i
 | `editorial` | Clean wedding MV in white magazine spreads, about 85 s | 16:9 | 31 photos across 14 spreads; poems, captions and handwritten titles |
 | `cinema` | Wedding opening film on black for the venue screen, about 1 min 55 s | 16:9 | 25 photos: childhood portraits, the first photo, dating panels, wedding; birthdays and the day they met |
 | `memoir` | The couple's life story in a pen hand on black, about 2 min 35 s | 16:9 | 37 photos: hometown and childhood cut-outs (transparent PNGs become stickers), childhood strip, chats, chapters, the licence, love pages |
+| `bloom` | Handwritten sticker life story on black: hometowns, parents tribute, growing up, dating, 4 seasons, license and wedding thanks, about 2 min 35 s | 16:9 | 20 slots (25–55 photos): hometown landmarks, kid & youth cutouts, parents, wing stickers, dating, pets, memories, 11 travel shots, ritual, proposal, engagement, license, wedding |
 | `starter` | A short beat-cut photo reel; the smallest template to read | 16:9, 9:16 | Any photos |
 
-`describe --kit KIT --template ID` prints a template's slots, copy fields, props, music and sample window as JSON; Album, Cinema, Comedy, DV Story, Editorial, Memoir and Starter also have a README in `src/templates/<id>/` with timing notes. Choose by purpose first; restyle a template rather than forcing a purpose into the wrong one. When nothing fits, build a new composition in the kit and register it (see [Add a template](#add-a-template)), or work in an existing non-VVV project with its own commands.
+`describe --kit KIT --template ID` prints a template's slots, copy fields, props, music and sample window as JSON; Album, Bloom, Cinema, Comedy, DV Story, Editorial, Memoir and Starter also have a README in `src/templates/<id>/` with timing notes. Choose by purpose first; restyle a template rather than forcing a purpose into the wrong one. When nothing fits, build a new composition in the kit and register it (see [Add a template](#add-a-template)), or work in an existing non-VVV project with its own commands.
 
 ## Commands
 
@@ -94,6 +95,7 @@ Optional `faces` and `focus` metadata can guide cropping. Dimensions and orienta
 | Editorial | `src/templates/editorial` | `VVV-Editorial` | Page lengths in beats (`PAGES`), photo boxes per spread, `LEAD` so entrance peaks land on beats, copy length per line |
 | Cinema | `src/templates/cinema` | `VVV-Cinema` | Page lengths in beats (`PAGES`), typing speed (characters per beat), the line that opens into the first photo, `LEAD` for slides, the drifting lights that keep typed pages moving |
 | Memoir | `src/templates/memoir` | `VVV-Memoir` | Page lengths in beats (`PAGES`), sticker outline colours, the strip's advance every few beats, typing speed, `LEAD` for slides |
+| Bloom | `src/templates/bloom` | `VVV-Bloom` | Page beats (`PAGES`), zero-based indices (`0..count-1`), per-index portrait/landscape hints, centered `FilmstripStage` timing, inline SVG doodles, `CartoonText` numeral pairing & `StayWipeText` layout stability |
 | Starter | `src/templates/starter` | `VVV-Starter` | Beat clock from the beat map, per-format gallery layouts, opening crop for mismatched photo orientation |
 | Doodle | `src/templates/doodle` | `VVV-Doodle` | Photo slots, layered art, crop, text capacity, animation anchors and `hits.json` |
 | Album | `src/templates/album` | `VVV-Album` | Nonempty gallery groups, photo framing, scene and hold durations, `hits.json` |
@@ -108,18 +110,18 @@ Scenes read the actual frame size from `useVideoConfig()`. The shared gallery en
 
 Change props for exposed controls and source for layouts, timing, animation, or new media support. Update schemas or declarations when the change alters inputs or runtime requirements. Some titles are baked into image assets: changing a text prop will not change those pixels. Inspect the relevant layers and replace or rebuild the artwork when needed.
 
-Recalculate duration after timing or story edits and inspect affected transitions and audio alignment. Rerun relevant validation and rendering against the changed project. The original template's checks and an older sample do not validate modified code.
+Recalculate duration after timing or story edits and inspect affected transitions and audio alignment. Rerun relevant validation and rendering against the changed project. The original template's checks and an older sample do not validate modified code. Audit motion/holds, slot indexing & playback style, illustration representation, and typography/glyphs using [template authoring](template-authoring.md)—and confirm any unresolved creative, slot, or font tradeoffs with the user before shipping template changes.
 
 ## Add a template
 
-A template is a folder, a catalog file and one registry line. An effect is the same with `"kind": "effect"` in its catalog, its component in `src/effects/<id>/index.tsx` and a demo composition in `demo.tsx`. In the kit:
+A template is a folder, a catalog file and one registry line. An effect is the same with `"kind": "effect"` in its catalog, its component in `src/effects/<id>/index.tsx` and a demo composition in `demo.tsx`. Before writing scenes or batch-generating art, run through the four inspection areas in [template authoring](template-authoring.md) and confirm ambiguous slot counts, hold/beat upgrades, artwork-vs-slot boundaries, or missing-font routes with the user. In the kit:
 
 1. `src/templates/<id>/index.tsx`: build the definition with `defineTemplate` from `core/template.ts`, giving its slots, copy (`COPY` with a label and default text per key), extra props schema, default music and `seconds(props)`. Pass `couple: false` for films without a couple. Read the frame with `useVideoConfig()` and branch the layout per format. For beat-planned scenes, use `beatClock` and `loadBeatGrid` from `core/beat-clock.ts`, and load the grid in `calculateMetadata`.
 2. `catalog/<id>.json`: `id`, `compositionId`, `title`, `description`, `formats` with `defaultFormat`, `music.required`, `check.maxStillSeconds` (plus `check.tracks` when a second song takes over), `slots`, `sample` and `defaultProps`. Add `shows` (`{"couple": {field: where}}`) so `describe` can say which facts appear. A slot that shows several outfits in turn declares `groups` (sizes adding up to `count`, such as `[2, 2]`) for `arrange`. A page-based template declares `timeline` (`pages` with beats, the `climax` page, and its `pace` prop with `min`/`max`) for `music fit` and `describe`; keep it equal to the page list in the code. When a format uses only some slots, list them in `formats[f].slots` and in the definition's `formatSlots`.
    Then run `npm run schemas` to write `schema/<id>.json`; the kit tests fail while it is stale. In the repository, also run `python3 scripts/export-template-index.py` to refresh `kits/remotion/index.json`, the machine-readable template index that registries and the MCP server read.
 3. `src/templates/registry.ts`: add the entry to `TEMPLATES`. The kit tests check that the registry and catalogs agree.
 4. A fictional fixture in `examples/<name>.json` and a composition per format in `examples/cases.tsx`, plus a README beside the template.
-5. Render each format at 1080p and run `check --video` with the template's limits until it passes. Then look at the frames.
+5. Render each format at 1080p and run `check --video` with the template's limits until it passes. Then inspect rendered stills/contact sheets and cutout backdrops using [template authoring](template-authoring.md#5-synchronization-licensing-and-release-checks).
 6. Give the catalog a `version` and a `package` block (`name`, `fixture`, `authors`, `license`) and publish it as a `.vvv` with evidence; see [.vvv packages](vvv-format.md).
 
-Use only local fonts from `font-sources.json`. Add any new music to `public/music/sources.json` with its license and hash, as `bundled` only when redistribution is allowed and as `download` otherwise.
+Use only local fonts from `font-sources.json`, and record every newly shipped MIT demo asset in `assets.json` and `ASSETS.md`. Add any new music to `public/music/sources.json` with its license and hash, as `bundled` only when redistribution is allowed and as `download` otherwise.

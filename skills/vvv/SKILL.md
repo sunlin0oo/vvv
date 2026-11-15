@@ -41,7 +41,7 @@ The user only briefs, watches samples and gives feedback; environment and comman
 
 Never hand the user a command to type, a stack trace or an error code; the exception is a step only they can take on their own account (installing musicdl, saving a TikHub token, approving a login), which `next` words for you.
 
-Routes combine: a brainstorm often lands on a template, and a recreation can become one. Ask the user only when the answer changes the film (audience, a missing fact, the format, the treatment); make routine choices yourself and say what you chose.
+Routes combine: a brainstorm often lands on a template, and a recreation can become one. Ask the user when the answer changes the film (audience, a missing fact, the format, the treatment) or when authoring/adapting a template raises unresolved tradeoffs in motion/beats, slot counts/orientation/playback style, illustration vs user slots, or missing/commercial fonts ([template authoring](references/template-authoring.md#0-audit-vs-ask-decision-boundary)); make clear engineering choices yourself and say what you chose.
 
 ### Template
 
@@ -60,7 +60,7 @@ Helper errors are one JSON object, `{"status": "failed", "code", "message", "nex
 
 ### Recreation
 
-Get the reference (`scripts/vvv_video.py fetch` for share links), measure its rhythm, then **write the page inventory before any code**: every page's beats, photo boxes, how each element enters, how the page leaves, text and decoration. [scripts/vvv_ref.py](scripts/vvv_ref.py) makes the evidence: `sheet` (0.5 s overview, 0.1 s around every transition), `layout` (boxes of settled frames), `compare` (reference and rebuild side by side). Rebuild from the inventory: generate the visual elements (lettering, ornaments, line art, textures, frames) through an image route with reference crops as style references, and keep code for layout, motion and editable text. Compare frame by frame. Never ship the reference itself. Details: [recreation](references/recreation.md).
+Get the reference (`scripts/vvv_video.py fetch` for share links), measure its rhythm, then **write the page inventory before any code**: every page's beats, photo boxes & playback styles (mask/motion/reveal), entrances, hold motion, exits, text and decoration—confirming any ambiguous slot, artwork or font decisions with the user first. [scripts/vvv_ref.py](scripts/vvv_ref.py) makes the evidence: `sheet` (0.5 s overview, 0.1 s around every transition), `layout` (boxes of settled frames), `compare` (reference and rebuild side by side). Rebuild from the inventory: generate rich textures/lettering/cutouts through an image route with reference crops as style references, draw clean simple flat doodles as inline animated SVGs, and keep code for layout, motion and editable text. Compare frame by frame. Never ship the reference itself. Details: [recreation](references/recreation.md) and [template authoring](references/template-authoring.md).
 
 ### Brainstorm
 
@@ -100,4 +100,5 @@ Fix failures first; `BEAT_SYNC` lists the worst peaks with their signed offsets,
 | Generating or editing still images | [Image generation](references/image-generation.md) |
 | Generated moving footage | [Video generation](references/video-generation.md) |
 | Multi-session work, production notes, resuming | [Production and continuation](references/production.md) |
+| Authoring templates: motion/beats, slots & playback style, SVG vs cutouts, font/glyph audit & confirmation gates | [Template authoring](references/template-authoring.md) |
 | Sampling, review, feedback and delivery | [Review and handoff](references/review-handoff.md) |

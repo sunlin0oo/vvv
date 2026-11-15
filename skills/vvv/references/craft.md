@@ -39,6 +39,7 @@ Where a move peaks depends on what it does, not only on its easing. Measured on 
 | Open from an edge (clip widens, picture still) | Right at its start, later when the edge it opens from is bright against white paper | 0.05–0.2 beat before; check the worst peaks |
 | Grow from a point or a small card | Past the middle: the area grows with the square of the size | About 0.5 beat before |
 | Double exposure between two photo sets | The midpoint | Centre it on the beat |
+| Symmetric filmstrip / carousel scroll (`ease-in-out`) | Exact midpoint (ending `[sw - dur, sw]` pulls peaks early by `-dur / 2`) | Centre `[sw - dur / 2, sw + dur / 2]` on integer beat `sw`; avoid stacking delayed wipes inside it |
 | A page sweep or wipe | Right as it enters when its front starts fast (ease-out) | On the beat |
 
 - **Stagger by whole beats.** Two photos entering half a beat apart merge into one peak between the beats. One element per beat lands each on its own beat.
@@ -50,7 +51,7 @@ Where a move peaks depends on what it does, not only on its easing. Measured on 
 `check` counts a stretch as still when the picture barely changes over half a second. Holds are necessary for reading, but the picture must keep breathing:
 
 - Push or drift photos slowly (a few percent of scale or position over the hold). Do not bounce them: the Doodle feedback was to keep prints still and let only the picture inside them move.
-- On text cards, let one element keep moving: a count-up, a line drawing itself, a pulse on the beat, a slow background drift.
+- On text cards, let one element keep moving: a count-up, a line drawing itself, a pulse on the beat, a slow background drift. Note that small corner accents on flat dark (`#000`) or uniform backgrounds leave >85% of pixels idle in the 48×27 `check` grid; pair subtle continuous scale/motion with a soft breathing ambient backdrop glow ([template authoring](template-authoring.md#1-photo-motion-holds-and-beat-alignment)).
 - Fill long holds with small arrivals (a doodle drawn in, a sticker landing on a beat).
 
 Check: no `STILL` runs, and a still share that suits the style. Compare the actual report and moving frames for the current render; a text-heavy welcome needs calmer frames than a fast photo montage.
@@ -60,7 +61,7 @@ Check: no `STILL` runs, and a still share that suits the style. Compare the actu
 - **One reading task at a time.** A title, then its line, then the picture. Don't stack three new things on one beat.
 - **Reading time.** Subtitle norms allow about 15 English or 9 Chinese characters per second. Titles that compete with motion need more. Hold a line at least 1.5 s after its entrance ends.
 - **Author the line breaks.** Templates split copy on `｜`. Break between phrases ("我们的故事｜从这里开始"), never inside one, and keep vertical lines to about 10 Chinese characters.
-- **Fonts are local.** Use the families in the kit's `font-sources.json`. A missing family fails at render time instead of silently falling back.
+- **Fonts are local.** Use the families in the kit's `font-sources.json`. Missing keys or unpackaged styles (`italic`, etc.) fail at render time instead of silently falling back (`fonts.ts` / `local-fonts.ts`). Audit every real character class (`汉字`, `0–9`, punctuation) before locking a font, keep multi-line reveals mounted (`visibility: "hidden"`) so later lines never shift earlier ones, and escalate missing/commercial fonts or defective glyphs (such as hollow numerals) to the user using the four recovery routes in [template authoring](template-authoring.md#4-typography-glyph-audit-and-missing-styles).
 
 Check: pause on every text frame at delivery size; every line breaks where the author meant and nothing overflows.
 
