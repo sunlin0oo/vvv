@@ -32,18 +32,22 @@ const HOP = 128;
 const BIAS = Number(opt.bias ?? 0.016);
 const FPS = SR / HOP; // envelope frames per second
 
-// ---------------------------------------------------------------- decode (Remotion's bundled ffmpeg)
-// (Remotion's minimal ffmpeg has no raw-PCM muxer, so decode to 16-bit WAV and skip to the data chunk.)
-const dec = spawnSync(
-  "npx",
-  ["remotion", "ffmpeg", "-v", "error", "-i", input, "-vn", "-ac", "1", "-ar", String(SR), "-acodec", "pcm_s16le", "-f", "wav", "-"],
-  { maxBuffer: 1 << 30 },
-);
-if (dec.status !== 0) {
-  console.error(dec.stderr.toString());
-  process.exit(1);
+// ---------------------------------------------------------------- decode
+let wav;
+if (input.toLowerCase().endsWith(".wav")) {
+  wav = fs.readFileSync(input);
+} else {
+  const dec = spawnSync(
+    process.platform === "win32" ? "npx.cmd" : "npx",
+    ["remotion", "ffmpeg", "-v", "error", "-i", input, "-vn", "-ac", "1", "-ar", String(SR), "-acodec", "pcm_s16le", "-f", "wav", "-"],
+    { maxBuffer: 1 << 30, shell: process.platform === "win32" },
+  );
+  if (dec.status !== 0) {
+    console.error(dec.stderr ? dec.stderr.toString() : (dec.error ? dec.error.message : "ffmpeg error"));
+    process.exit(1);
+  }
+  wav = dec.stdout;
 }
-const wav = dec.stdout;
 let dataAt = 12;
 while (dataAt + 8 <= wav.length && wav.toString("ascii", dataAt, dataAt + 4) !== "data") {
   const size = wav.readUInt32LE(dataAt + 4);
