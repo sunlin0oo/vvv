@@ -9,6 +9,7 @@ out/
 build/
 .superpowers/
 /vvv-skill/
+assets/
 
 # Local design history and source-project research are not public documentation.
 /docs/plans/

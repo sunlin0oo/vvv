@@ -18,6 +18,7 @@ An explicit request to render directly, or existing authorization to continue, s
    - `RESOLUTION` warning at `--scale 0.5` is expected for drafts; deliver at 1.
 2. **Frames.** Sample a contact sheet across the film and dense frames just before, during and after each transition. Check names, dates and captions against the source; crops and faces; text breaking where the author meant; nothing overflowing at delivery size. Check each format separately.
 3. **Motion and sound.** Play the hook, the transitions, the densest text and the end. Listen to the start, the loudest part and the fade-out. If you cannot play or listen in this environment, say which judgments remain open.
+4. **Template match.** For a film based on a specific template, compare the rendered timeline scene by scene against the baseline and the user's requested changes. Verify that the expected copy, illustrations, and transitions appear in the rendered output and that any omissions match the user's decisions. Use frames for content and playback around cuts for transitions. Fix missing elements before handoff. When sharing the film for review, point out any decisions still open and invite feedback on the wording, emotional tone, and pacing.
 
 For films with extracted footage, check the first and last frames around each cut against the selected source range.
 
